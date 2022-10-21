@@ -35,6 +35,10 @@ public class StatisticsTest
         //Float.NaN (not-a-number), as described in
         //https://www.geeksforgeeks.org/nan-not-number-java/
         //Design the asserts here and implement accordingly.
+
+        assertEquals(s.average, Float.NaN, epsilon);
+        assertEquals(s.min, Float.NaN, epsilon);
+        assertEquals(s.max, Float.NaN, epsilon);
     }
     @Test
     public void reportsAlertsIfMaxIsMoreThanThreshold()
@@ -47,7 +51,7 @@ public class StatisticsTest
 
         Float[] numbers = {11.5f, 6.9f, 7.5f, 6.6f};
         List<Float> numberList = Arrays.asList(numbers);
-        checker.checkAndAlert(numbers);
+        checker.checkAndAlert(numberList);
         
         assertTrue(emailAlerter.emailSent);
         assertTrue(ledAlerter.ledGlows);
