@@ -29,7 +29,7 @@ public class Statistics
 
     public static class Stats {
         public Float min;
-        public Flot max;
+        public Float max;
         public Float average;
 
         private List<Float> numbers;
